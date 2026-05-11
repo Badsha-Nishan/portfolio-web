@@ -47,7 +47,10 @@ export default function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
       className="
-      fixed top-0 left-0 right-0 z-[9999]
+        fixed top-0 left-0 right-0 z-[9999]
+        w-full py-4
+        backdrop-blur-3xl bg-black/40
+        transition-all duration-300
       "
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
