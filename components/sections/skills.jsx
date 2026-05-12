@@ -38,7 +38,7 @@ const skillGroups = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 md:py-32">
+    <section id="skills" className="mt-24">
       <div className="container mx-auto px-6">
         {/* Heading */}
         <motion.div
@@ -48,8 +48,8 @@ export default function Skills() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <h2 className="text-sm uppercase tracking-widest text-primary mb-3">
-            Skills
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 bg-gradient-to-r from-[#48c6ef] to-[#6f86d6] bg-clip-text text-transparent">
+            SKILLS
           </h2>
           <h3 className="text-3xl md:text-4xl font-bold mb-4">
             Technologies I Use

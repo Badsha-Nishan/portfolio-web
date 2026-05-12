@@ -39,7 +39,7 @@ export default function About() {
           className="max-w-3xl mx-auto text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6 bg-gradient-to-r from-[#48c6ef] to-[#6f86d6] bg-clip-text text-transparent">
-            About
+            ABOUT
           </h2>
           <h3 className="text-2xl md:text-3xl font-bold mb-6 text-balance">
             Crafting Digital Experiences

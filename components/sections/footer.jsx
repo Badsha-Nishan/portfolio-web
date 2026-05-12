@@ -1,19 +1,25 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Github, Linkedin, Mail } from "lucide-react"
+import { motion } from "framer-motion";
+import { Github, Linkedin, Mail } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: Mail, href: "mailto:contact@example.com", label: "Email" },
-]
+  { icon: Github, href: "https://github.com/Badsha-Nishan", label: "GitHub" },
+  {
+    icon: Linkedin,
+    href: "https://linkedin.com/in/badsha-nishan",
+    label: "LinkedIn",
+  },
+  { icon: Mail, href: "mailto:badshanisan14@gmail.com", label: "Email" },
+];
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="py-24 md:py-32 border-t border-border/50">
+    <footer className="py-18 md:py-24 border-t border-border/50">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <motion.p
@@ -24,6 +30,13 @@ export default function Footer() {
           >
             &copy; {currentYear} Sk Badsha Nishan. All rights reserved.
           </motion.p>
+
+          <Link
+            href="#"
+            className="inline-block hover:scale-125 transition duration-200"
+          >
+            <Image src="/logo.png" width={80} height={80} alt="Logo" />
+          </Link>
 
           <motion.div
             initial={{ opacity: 0 }}
@@ -47,5 +60,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

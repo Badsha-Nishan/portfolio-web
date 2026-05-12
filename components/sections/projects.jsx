@@ -21,20 +21,28 @@ const projects = [
     github: "https://github.com/Badsha-Nishan/skillsphere-hub",
   },
   {
-    title: "Project Two",
-    description: "Interactive UI dashboard with real-time data visualization.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
-    tech: ["React", "Framer Motion", "API"],
-    live: "#",
-    github: "#",
+    title: "Dragon News",
+    description:
+      "Dragon News is a modern news platform delivering the latest updates, trending stories, and in-depth articles across various categories with a clean, fast, and user-friendly experience.",
+    image: "/dragon.png",
+    tech: ["Next.js", "React.js", "Tailwind", "Better Auth", "Google Login"],
+    live: "https://dragon-news-nextjs-indol.vercel.app",
+    github: "https://github.com/Badsha-Nishan/dragon-news-nextjs",
   },
   {
-    title: "Project Three",
-    description: "E-commerce platform with smooth UX and payment integration.",
-    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
-    tech: ["Next.js", "Stripe", "Prisma"],
-    live: "#",
-    github: "#",
+    title: "KeenKeeper",
+    description:
+      "KeenKeeper is a simple and secure task management app that helps users organize, track, and manage their daily to-dos efficiently with a clean and intuitive interface.",
+    image: "/keenkeeper.png",
+    tech: [
+      "React.js",
+      "React Router DOM",
+      "Tailwind",
+      "Rechart",
+      "Context API",
+    ],
+    live: "https://keen-keeper-react.vercel.app/",
+    github: "https://github.com/Badsha-Nishan/keen-keeper-react",
   },
 ];
 
@@ -50,8 +58,8 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6 bg-gradient-to-r from-[#48c6ef] to-[#6f86d6] bg-clip-text text-transparent">
-            Projects
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 bg-gradient-to-r from-[#48c6ef] to-[#6f86d6] bg-clip-text text-transparent">
+            PROJECTS
           </h2>
           <h3 className="text-2xl md:text-3xl font-bold mb-6 text-balance">
             Things I’ve Built
@@ -114,6 +122,7 @@ export default function Projects() {
                   <div className="flex gap-3">
                     <a
                       href={project.live}
+                      target="_blank"
                       className="flex items-center gap-2 text-xs px-3 py-2 rounded-lg bg-gradient-to-r from-[#48c6ef] to-[#6f86d6] text-black hover:scale-105 transition"
                     >
                       <ExternalLink size={14} /> Live Demo
