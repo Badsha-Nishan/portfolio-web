@@ -91,7 +91,7 @@ export default function Navbar() {
           ))}
 
           <motion.a
-            href="#projects"
+            href="#contact"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.96 }}
             transition={{ type: "spring", stiffness: 300 }}
