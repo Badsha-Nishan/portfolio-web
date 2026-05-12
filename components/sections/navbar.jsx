@@ -49,12 +49,12 @@ export default function Navbar() {
       transition={{ duration: 0.5 }}
       className="
         fixed top-0 left-0 right-0 z-[9999]
-        w-full py-4
+         py-4
         backdrop-blur-3xl bg-black/40
         transition-all duration-300
       "
     >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto w-11/12 flex items-center justify-between">
         {/* Logo */}
         <motion.a
           href="#"

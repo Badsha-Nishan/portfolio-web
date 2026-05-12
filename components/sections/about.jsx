@@ -38,17 +38,18 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="max-w-3xl mx-auto text-center mb-16"
         >
-          <h2 className="text-sm font-medium text-primary mb-4 uppercase tracking-wider">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6 bg-gradient-to-r from-[#48c6ef] to-[#6f86d6] bg-clip-text text-transparent">
             About
           </h2>
-          <h3 className="text-3xl md:text-4xl font-bold mb-6 text-balance">
+          <h3 className="text-2xl md:text-3xl font-bold mb-6 text-balance">
             Crafting Digital Experiences
           </h3>
           <p className="text-muted-foreground text-lg text-pretty">
-            I&apos;m a full-stack developer passionate about building
-            exceptional digital experiences. With a strong foundation in both
-            frontend and backend technologies, I create seamless, user-centric
-            applications that make a difference.
+            I&apos;m a passionate Frontend Developer who enjoys creating clean,
+            responsive, and interactive web interfaces using React and Next.js.
+            I’m currently expanding my skill set by learning backend development
+            with Node.js and Express.js, with the goal of becoming a
+            well-rounded full-stack developer.
           </p>
         </motion.div>
 

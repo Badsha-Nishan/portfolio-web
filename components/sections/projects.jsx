@@ -5,13 +5,20 @@ import { Github, ExternalLink } from "lucide-react";
 
 const projects = [
   {
-    title: "Project One",
+    title: "SkillSphere Hub",
     description:
-      "Modern full-stack web application with authentication and dashboard.",
-    image: "https://images.unsplash.com/photo-1522542550221-31fd19575a2d",
-    tech: ["Next.js", "Tailwind", "MongoDB"],
-    live: "#",
-    github: "#",
+      "SkillSphere Hub is a modern learning platform for skill-based courses like Web Development, Design, and Marketing, built with Next.js and a clean, responsive UI for a smooth experience across all devices.",
+    image: "/skillsphere.png",
+    tech: [
+      "Next.js",
+      "React.js",
+      "Tailwind",
+      "HeroUI",
+      "Better Auth",
+      "MongoDB",
+    ],
+    live: "https://skillsphere-hub.vercel.app",
+    github: "https://github.com/Badsha-Nishan/skillsphere-hub",
   },
   {
     title: "Project Two",
@@ -33,7 +40,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 md:py-32">
+    <section id="projects" className="">
       <div className="container mx-auto px-6">
         {/* Heading */}
         <motion.div
@@ -43,10 +50,10 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <h2 className="text-sm uppercase tracking-widest text-primary mb-3">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6 bg-gradient-to-r from-[#48c6ef] to-[#6f86d6] bg-clip-text text-transparent">
             Projects
           </h2>
-          <h3 className="text-3xl md:text-4xl font-bold mb-4">
+          <h3 className="text-2xl md:text-3xl font-bold mb-6 text-balance">
             Things I’ve Built
           </h3>
           <p className="text-muted-foreground">
@@ -107,9 +114,9 @@ export default function Projects() {
                   <div className="flex gap-3">
                     <a
                       href={project.live}
-                      className="flex items-center gap-2 text-xs px-3 py-2 rounded-lg bg-white text-black hover:scale-105 transition"
+                      className="flex items-center gap-2 text-xs px-3 py-2 rounded-lg bg-gradient-to-r from-[#48c6ef] to-[#6f86d6] text-black hover:scale-105 transition"
                     >
-                      <ExternalLink size={14} /> Live
+                      <ExternalLink size={14} /> Live Demo
                     </a>
 
                     <a

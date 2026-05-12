@@ -48,12 +48,13 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6"
             >
-              Crafting Modern{" "}
+              Crafting Modern <br />
               <span className="bg-gradient-to-r from-[#48c6ef] to-[#6f86d6] bg-clip-text text-transparent">
                 Web Experiences
-              </span>{" "}
+              </span>
+              <br />
               That Feel Alive.
             </motion.h1>
 
