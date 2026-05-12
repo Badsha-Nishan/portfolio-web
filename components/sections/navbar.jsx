@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const navLinks = [
   { name: "About", href: "#about" },
@@ -57,10 +58,10 @@ export default function Navbar() {
         {/* Logo */}
         <motion.a
           href="#"
-          className="text-lg font-semibold text-white"
+          className="flex pl-5 justify-center text-3xl gap-2 font-semibold text-white"
           whileHover={{ scale: 1.05 }}
         >
-          Sk Badsha Nishan
+          <Image src={"/logo.png"} width={50} height={50} alt="Logo" />
         </motion.a>
 
         {/* Desktop */}
@@ -88,12 +89,15 @@ export default function Navbar() {
             </motion.a>
           ))}
 
-          <a
-            href="#contact"
-            className="px-4 py-2 rounded-lg bg-white text-black text-sm font-medium"
+          <motion.a
+            href="#projects"
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.96 }}
+            transition={{ type: "spring", stiffness: 300 }}
+            className="px-6 py-3 rounded-xl bg-primary text-black font-medium shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all duration-300"
           >
             Get in Touch
-          </a>
+          </motion.a>
         </div>
 
         {/* Mobile */}

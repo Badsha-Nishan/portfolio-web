@@ -54,19 +54,25 @@ export default function Hero() {
 
             {/* BUTTONS */}
             <div className="flex flex-col sm:flex-row gap-4 mb-10 justify-center md:justify-start">
-              <a
+              <motion.a
                 href="#projects"
-                className="px-6 py-3 rounded-xl bg-primary text-black"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.96 }}
+                transition={{ type: "spring", stiffness: 300 }}
+                className="px-6 py-3 rounded-xl bg-primary text-black font-medium shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all duration-300"
               >
                 View Projects
-              </a>
+              </motion.a>
 
-              <a
+              <motion.a
                 href="#contact"
-                className="px-6 py-3 rounded-xl border border-white/10"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.96 }}
+                transition={{ type: "spring", stiffness: 300 }}
+                className="px-6 py-3 rounded-xl border border-white/10 hover:bg-white/5 hover:border-white/20 transition-all duration-300"
               >
                 Contact Me
-              </a>
+              </motion.a>
             </div>
 
             {/* SOCIALS */}
