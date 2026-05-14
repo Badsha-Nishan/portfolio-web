@@ -23,7 +23,6 @@ const techStack = [
 export default function TechStack() {
   return (
     <section className="py-18 md:py-24 bg-black text-white overflow-hidden">
-     
       {/* Marquee Wrapper */}
       <div className="relative w-full overflow-hidden">
         <motion.div
