@@ -9,6 +9,7 @@ import CustomCursor from "../components/sections/CustomCursor";
 import LoadingScreen from "../components/sections/LoadingScreen";
 import Education from "../components/sections/Education";
 import TechStack from "../components/sections/TechStack";
+import CursorTrail from "../components/CursorTrail";
 
 export default function Home() {
   return (
@@ -22,7 +23,8 @@ export default function Home() {
       <Education />
       <Contact />
       <Footer />
-      <CustomCursor />
+      {/* <CustomCursor /> */}
+      <CursorTrail />
       <LoadingScreen />
     </main>
   );
