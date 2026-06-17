@@ -21,13 +21,22 @@ const projects = [
     github: "https://github.com/Badsha-Nishan/skillsphere-hub",
   },
   {
-    title: "Dragon News",
+    title: "Study Nook",
     description:
-      "Dragon News is a modern news platform delivering the latest updates, trending stories, and in-depth articles across various categories with a clean, fast, and user-friendly experience.",
-    image: "/dragon.png",
-    tech: ["Next.js", "React.js", "Tailwind", "Better Auth", "Google Login"],
-    live: "https://dragon-news-nextjs-indol.vercel.app",
-    github: "https://github.com/Badsha-Nishan/dragon-news-nextjs",
+      "StudyNook is a modern full-stack study room booking platform where users can discover, add, and reserve study rooms easily. Built with Next.js, Express.js, MongoDB, and Better Auth.",
+    image: "/studynook.png",
+    tech: [
+      "Next.js",
+      "React.js",
+      "Express.js",
+      "Node.js",
+      "MongoDB",
+      "Tailwind",
+      "Better Auth",
+      "Google Login",
+    ],
+    live: "https://studynook-client-one.vercel.app",
+    github: "https://github.com/Badsha-Nishan/studynook-client",
   },
   {
     title: "KeenKeeper",
@@ -62,7 +71,7 @@ export default function Projects() {
             PROJECTS
           </h2>
           <h3 className="text-2xl md:text-3xl font-bold mb-6 text-balance">
-            Things I’ve Built
+            Things I have Built
           </h3>
           <p className="text-muted-foreground">
             A selection of projects showcasing my skills in full-stack
