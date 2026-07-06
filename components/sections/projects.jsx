@@ -5,10 +5,10 @@ import { Github, ExternalLink } from "lucide-react";
 
 const projects = [
   {
-    title: "SkillSphere Hub",
+    title: "Life Drop",
     description:
-      "SkillSphere Hub is a modern learning platform for skill-based courses like Web Development, Design, and Marketing, built with Next.js and a clean, responsive UI for a smooth experience across all devices.",
-    image: "/skillsphere.png",
+      "A modern full-stack Blood Donation Management Platform built with Next.js, React, MongoDB, Express.js, and Better Auth. The platform connects blood donors with recipients through an easy-to-use dashboard where users can create, manage, and track blood donation requests.",
+    image: "/lifedrop.png",
     tech: [
       "Next.js",
       "React.js",
@@ -17,8 +17,8 @@ const projects = [
       "Better Auth",
       "MongoDB",
     ],
-    live: "https://skillsphere-hub.vercel.app",
-    github: "https://github.com/Badsha-Nishan/skillsphere-hub",
+    live: "https://life-drop-client.vercel.app",
+    github: "https://github.com/Badsha-Nishan/life-drop-client",
   },
   {
     title: "Study Nook",
@@ -39,6 +39,38 @@ const projects = [
     github: "https://github.com/Badsha-Nishan/studynook-client",
   },
   {
+    title: "SkillSphere Hub",
+    description:
+      "SkillSphere Hub is a modern learning platform for skill-based courses like Web Development, Design, and Marketing, built with Next.js and a clean, responsive UI for a smooth experience across all devices.",
+    image: "/skillsphere.png",
+    tech: [
+      "Next.js",
+      "React.js",
+      "Tailwind",
+      "HeroUI",
+      "Better Auth",
+      "MongoDB",
+    ],
+    live: "https://skillsphere-hub.vercel.app",
+    github: "https://github.com/Badsha-Nishan/skillsphere-hub",
+  },
+  {
+    title: "Digi Tools",
+    description:
+      "Modern digital tool buying platform with dynamic UI & cart system.",
+    image: "/digitools.png",
+    tech: [
+      "React.js",
+      "React Hooks",
+      "React-Toastify",
+      "Tailwind",
+      "DaisyUI",
+      "JSON",
+    ],
+    live: "https://digital-tool.netlify.app",
+    github: "https://github.com/Badsha-Nishan/digital-tool-buying-website",
+  },
+  {
     title: "KeenKeeper",
     description:
       "KeenKeeper is a simple and secure task management app that helps users organize, track, and manage their daily to-dos efficiently with a clean and intuitive interface.",
@@ -50,8 +82,17 @@ const projects = [
       "Rechart",
       "Context API",
     ],
-    live: "https://keen-keeper-react.vercel.app/",
+    live: "https://keen-keeper-react.vercel.app",
     github: "https://github.com/Badsha-Nishan/keen-keeper-react",
+  },
+  {
+    title: "Job Application Tracker",
+    description:
+      "Job application tracker with status management and responsive UI with some interactivity.",
+    image: "/job.png",
+    tech: ["JavaScript (ES6+)", "Tailwind", "Local Storage/JSON"],
+    live: "https://badsha-nishan.github.io/Job-Application-Tracker",
+    github: "https://github.com/Badsha-Nishan/Job-Application-Tracker",
   },
 ];
 
@@ -80,7 +121,7 @@ export default function Projects() {
         </motion.div>
 
         {/* Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -89,15 +130,14 @@ export default function Projects() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
               whileHover={{ y: -10, rotateX: 3, rotateY: -3 }}
-              className="group perspective"
+              className="group perspective h-full"
             >
-              {/* Card */}
-              <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-black/40 backdrop-blur-xl">
+              <div className="relative h-full rounded-2xl overflow-hidden border border-white/10 bg-black/40 backdrop-blur-xl flex flex-col">
                 {/* Glow border */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-primary/20 via-transparent to-accent/20 blur-xl" />
 
                 {/* Image */}
-                <div className="h-48 overflow-hidden">
+                <div className="h-48 overflow-hidden shrink-0">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -106,29 +146,30 @@ export default function Projects() {
                 </div>
 
                 {/* Content */}
-                <div className="p-6 relative">
-                  <h4 className="text-xl font-semibold mb-2 group-hover:text-primary transition">
-                    {project.title}
-                  </h4>
+                <div className="p-6 relative flex flex-col flex-1">
+                  <div>
+                    <h4 className="text-xl font-semibold mb-2 group-hover:text-primary transition">
+                      {project.title}
+                    </h4>
 
-                  <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
+                    <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                      {project.description}
+                    </p>
 
-                  {/* Tech stack */}
-                  <div className="flex flex-wrap gap-2 mb-5">
-                    {project.tech.map((t) => (
-                      <span
-                        key={t}
-                        className="text-xs px-2 py-1 rounded-full bg-white/5 border border-white/10 text-white/70"
-                      >
-                        {t}
-                      </span>
-                    ))}
+                    <div className="flex flex-wrap gap-2 mb-5">
+                      {project.tech.map((t) => (
+                        <span
+                          key={t}
+                          className="text-xs px-2 py-1 rounded-full bg-white/5 border border-white/10 text-white/70"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
                   </div>
 
-                  {/* Buttons */}
-                  <div className="flex gap-3">
+                  {/* Buttons always at bottom */}
+                  <div className="flex gap-3 mt-auto">
                     <a
                       href={project.live}
                       target="_blank"
