@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, ArrowDown } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowDown, Download } from "lucide-react";
 import Image from "next/image";
 
 const socialLinks = [
@@ -74,23 +74,27 @@ export default function Hero() {
             {/* BUTTONS */}
             <div className="flex flex-col sm:flex-row items-center md:items-start gap-4 mb-10">
               <motion.a
-                href="#projects"
+                href="https://drive.google.com/uc?export=download&id=1NLWR-sqW1VJIo8PoB9xEIndTsbR1YzJH"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.96 }}
                 transition={{ type: "spring", stiffness: 300 }}
-                className="px-6 py-3 rounded-xl bg-primary text-black font-medium shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all duration-300"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-black font-medium shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all duration-300"
               >
-                View Projects
+                <Download size={18} />
+                Download Resume
               </motion.a>
 
               <motion.a
-                href="#contact"
+                href="https://drive.google.com/file/d/1NLWR-sqW1VJIo8PoB9xEIndTsbR1YzJH/view"
+                target="_blank"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.96 }}
                 transition={{ type: "spring", stiffness: 300 }}
                 className="px-6 py-3 rounded-xl border border-white/10 hover:bg-white/5 hover:border-white/20 transition-all duration-300"
               >
-                Contact Me
+                View Resume
               </motion.a>
             </div>
 

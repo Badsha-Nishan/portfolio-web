@@ -2,8 +2,66 @@
 
 import { motion } from "framer-motion";
 import { Mail, Send, Github, Linkedin, LocateIcon } from "lucide-react";
+import { useState } from "react";
+import toast from "react-hot-toast";
 
 export default function Contact() {
+  const [loading, setLoading] = useState(false);
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    setLoading(true);
+
+    const data = {
+      access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
+      subject: "New Portfolio Contact",
+      from_name: "Badsha Nishan Portfolio",
+      ...formData,
+    };
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast.success("Message sent successfully!");
+
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
+      } else {
+        toast.error("Failed to send message.");
+      }
+    } catch (error) {
+      toast.error("Something went wrong!");
+    }
+
+    setLoading(false);
+  };
+
   return (
     <section id="contact" className="mt-24">
       <div className="container mx-auto px-6">
@@ -79,15 +137,15 @@ export default function Contact() {
 
           {/* Right side - form */}
           <motion.form
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            onSubmit={handleSubmit}
             className="p-6 rounded-2xl bg-black/40 border border-white/10 backdrop-blur-xl space-y-4"
           >
             <input
               required
               type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
               placeholder="Your Name"
               className="w-full p-3 rounded-lg bg-white/5 border border-white/10 outline-none focus:border-primary"
             />
@@ -95,21 +153,31 @@ export default function Contact() {
             <input
               required
               type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
               placeholder="Your Email"
               className="w-full p-3 rounded-lg bg-white/5 border border-white/10 outline-none focus:border-primary"
             />
 
             <textarea
-              rows="5"
+              required
+              rows={5}
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
               placeholder="Your Message"
               className="w-full p-3 rounded-lg bg-white/5 border border-white/10 outline-none focus:border-primary"
             />
 
             <button
               type="submit"
-              className="w-full flex items-center justify-center gap-2 p-3 rounded-lg bg-primary text-black font-medium hover:scale-[1.02] transition"
+              disabled={loading}
+              className="w-full flex items-center justify-center gap-2 p-3 rounded-lg bg-primary text-black font-medium hover:scale-[1.02] transition disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              Send Message <Send size={16} />
+              {loading ? "Sending..." : "Send Message"}
+
+              {!loading && <Send size={16} />}
             </button>
           </motion.form>
         </div>
