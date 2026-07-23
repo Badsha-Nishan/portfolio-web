@@ -7,32 +7,45 @@ const skillGroups = [
   {
     title: "Frontend",
     icon: Layout,
-    skills: ["React", "Next.js", "Tailwind CSS", "Framer Motion"],
+    skills: ["React.js", "Next.js", "Tailwind CSS", "Framer Motion", "Hero UI"],
   },
   {
     title: "Backend",
     icon: Server,
-    skills: ["Node.js", "Express", "REST API"],
+    skills: ["Node.js", "Express.js", "REST API", "JWT", "Better Auth"],
   },
   {
     title: "Database",
     icon: Database,
-    skills: ["MongoDB", "PostgreSQL"],
+    skills: ["MongoDB", "Mongoose"],
   },
   {
     title: "Languages",
     icon: Code2,
-    skills: ["JavaScript", "TypeScript"],
+    skills: ["JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3"],
   },
   {
     title: "Tools",
     icon: Wrench,
-    skills: ["Git", "GitHub", "Vercel"],
+    skills: [
+      "Git",
+      "GitHub",
+      "VS Code",
+      "Vercel",
+      "Chrome DevTools",
+      "Postman",
+    ],
   },
   {
-    title: "Web",
+    title: "Core Concepts",
     icon: Globe,
-    skills: ["SEO Basics", "Responsive Design"],
+    skills: [
+      "Responsive Design",
+      "Authentication",
+      "Google OAuth",
+      "Deployment",
+      "SEO Basics",
+    ],
   },
 ];
 

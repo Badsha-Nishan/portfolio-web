@@ -5,6 +5,27 @@ import { Github, ExternalLink } from "lucide-react";
 
 const projects = [
   {
+    title: "Skill Pilot - AI",
+    description:
+      "SkillPilot AI is an advanced, production-grade career guidance and technical mentorship platform designed for software engineers. It combines bespoke, week-by-week learning roadmaps generated via the Google Gemini Pro model with a conversational AI Career Mentor that streaming-synchronizes learning metrics in real time.",
+    image: "/skillpilot-ai.png",
+    tech: [
+      "React.js",
+      "AI Engine",
+      "Node.js",
+      "Express",
+      "TypeScript",
+      "Better Auth",
+      "MongoDB",
+      "Tailwind",
+      "HeroUI",
+      "Recharts",
+      "Zod",
+    ],
+    live: "https://skillpilot-ai-backend.onrender.com",
+    github: "https://github.com/Badsha-Nishan/skillpilot-ai",
+  },
+  {
     title: "Life Drop",
     description:
       "A modern full-stack Blood Donation Management Platform built with Next.js, React, MongoDB, Express.js, and Better Auth. The platform connects blood donors with recipients through an easy-to-use dashboard where users can create, manage, and track blood donation requests.",
@@ -37,6 +58,23 @@ const projects = [
     ],
     live: "https://studynook-client-one.vercel.app",
     github: "https://github.com/Badsha-Nishan/studynook-client",
+  },
+  {
+    title: "Event Hub",
+    description:
+      "A modern Full-Stack Event Management Platform built with React, TypeScript, Node.js, Express, and MongoDB. EventHub allows users to discover events, create and manage events, register for events, and enjoy a seamless, responsive experience with secure authentication.",
+    image: "/event-hub.png",
+    tech: [
+      "React.js",
+      "TypeScript",
+      "MongoDB",
+      "Tailwind",
+      "Axios",
+      "HeroUI",
+      "TanStack Query",
+    ],
+    live: "https://event-hub-client-gold.vercel.app",
+    github: "https://github.com/Badsha-Nishan/event-hub-client",
   },
   {
     title: "SkillSphere Hub",
@@ -175,7 +213,7 @@ export default function Projects() {
                       target="_blank"
                       className="flex items-center gap-2 text-xs px-3 py-2 rounded-lg bg-gradient-to-r from-[#48c6ef] to-[#6f86d6] text-black hover:scale-105 transition"
                     >
-                      <ExternalLink size={14} /> Live Demo
+                      <ExternalLink size={14} /> Live Link
                     </a>
 
                     <a
