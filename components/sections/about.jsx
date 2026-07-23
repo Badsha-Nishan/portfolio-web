@@ -2,8 +2,9 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
 import { Code2, Palette, Zap } from "lucide-react";
+import { useRef, useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 const highlights = [
   {
@@ -29,6 +30,8 @@ export default function About() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
+  const [showMore, setShowMore] = useState(false);
+
   return (
     <section id="about" className="py-24 md:py-32" ref={ref}>
       <div className="container mx-auto px-6">
@@ -39,18 +42,58 @@ export default function About() {
           className="max-w-3xl mx-auto text-center mb-16"
         >
           <h2 className="underline decoration-[#48c6ef] underline-offset-4 text-sm sm:text-xl md:text-2xl font-bold leading-tight mb-6 bg-gradient-to-r from-[#48c6ef] to-[#6f86d6] bg-clip-text text-transparent">
-            ABOUT
+            ABOUT ME
           </h2>
           <h3 className="text-2xl md:text-3xl font-bold mb-6 text-balance">
-            Crafting Digital Experiences
+            Turning Ideas into Interactive Web Experiences
           </h3>
-          <p className="text-muted-foreground text-lg text-pretty">
-            I&apos;m a passionate Frontend Developer who enjoys creating clean,
-            responsive, and interactive web interfaces using React and Next.js.
-            I’m currently expanding my skill set by learning backend development
-            with Node.js and Express.js, with the goal of becoming a
-            well-rounded full-stack developer.
+          <p className="text-muted-foreground text-lg text-pretty leading-relaxed">
+            I&apos;m a passionate Full Stack Developer with a strong interest in
+            building modern, responsive, and user-friendly web applications. My
+            programming journey began with HTML, CSS, and JavaScript, and as I
+            continued learning, I discovered how much I enjoy turning ideas into
+            interactive digital experiences. Over time, I expanded my skills to
+            work with React, Next.js, Node.js, Express.js, and MongoDB, allowing
+            me to build complete web applications from frontend to backend.
           </p>
+
+          <motion.div
+            initial={false}
+            animate={{
+              height: showMore ? "auto" : 0,
+              opacity: showMore ? 1 : 0,
+            }}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
+            className="overflow-hidden"
+          >
+            <div className="pt-5 space-y-5">
+              <p className="text-muted-foreground text-lg text-pretty leading-relaxed">
+                I enjoy creating clean and visually appealing user interfaces
+                while also building reliable APIs, managing databases, and
+                developing secure, scalable application features. I&apos;m
+                particularly interested in solving real-world problems through
+                technology and continuously improving my skills by building
+                practical projects.
+              </p>
+
+              <p className="text-muted-foreground text-lg text-pretty leading-relaxed">
+                Outside of programming, I enjoy exploring new technologies,
+                learning about AI tools, watching tech content, and working on
+                personal projects. I&apos;m a curious and consistent learner who
+                enjoys taking on new challenges and growing as a developer.
+              </p>
+            </div>
+          </motion.div>
+
+          <button
+            type="button"
+            onClick={() => setShowMore(!showMore)}
+            className="inline-flex items-center gap-2 mt-6 px-5 py-2.5 rounded-lg border border-primary/30 bg-primary/10 text-primary font-medium transition-all duration-300 hover:bg-primary hover:text-black hover:scale-105"
+          >
+            {showMore ? "Show Less" : "See More"}
+
+            {showMore ? <ChevronUp size={17} /> : <ChevronDown size={17} />}
+          </button>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-6">
