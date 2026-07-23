@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Send, Github, Linkedin, LocateIcon } from "lucide-react";
+import { Mail, Send, Github, Linkedin, Phone, Facebook } from "lucide-react";
 import { useState } from "react";
 import toast from "react-hot-toast";
 
@@ -101,18 +101,31 @@ export default function Contact() {
                 <Mail className="text-primary" />
                 <h4 className="font-semibold">Email</h4>
               </div>
-              <p className="text-muted-foreground">badshanisan14@gmail.com</p>
+              <a
+                href="mailto:badshanisan14@gmail.com"
+                className="text-muted-foreground hover:text-primary transition break-all"
+              >
+                badshanisan14@gmail.com
+              </a>
             </div>
+
+            {/* Phone card */}
             <div className="p-6 rounded-2xl bg-black/40 border border-white/10 backdrop-blur-xl">
               <div className="flex items-center gap-3 mb-3">
-                <LocateIcon className="text-primary" />
-                <h4 className="font-semibold">Location</h4>
+                <Phone className="text-primary" />
+                <h4 className="font-semibold">Phone</h4>
               </div>
-              <p className="text-muted-foreground">BANGLADESH</p>
+
+              <a
+                href="tel:+8801986862697"
+                className="text-muted-foreground hover:text-primary transition"
+              >
+                +880 1986-862697 (Whats App)
+              </a>
             </div>
 
             {/* Social */}
-            <div className="p-6 rounded-2xl bg-black/40 border border-white/10 backdrop-blur-xl">
+            <div className="p-5 rounded-2xl bg-black/40 border border-white/10 backdrop-blur-xl">
               <h4 className="font-semibold mb-4">Social</h4>
 
               <div className="flex gap-4">
@@ -130,6 +143,13 @@ export default function Contact() {
                   className="p-3 rounded-lg border border-white/10 hover:bg-white/5 transition"
                 >
                   <Linkedin />
+                </a>
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/badsha.nishan"
+                  className="p-3 rounded-lg border border-white/10 hover:bg-white/5 transition"
+                >
+                  <Facebook />
                 </a>
               </div>
             </div>

@@ -154,7 +154,7 @@ export default function Projects() {
           </h3>
           <p className="text-muted-foreground">
             A selection of projects showcasing my skills in full-stack
-            development, UI design, and performance optimization.
+            development, modern UI design, and responsive web experiences.
           </p>
         </motion.div>
 
